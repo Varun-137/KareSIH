@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'montserrat';
+    color: #fff;
+}
+html,
+body {
+    height: 100%;
+    width:100%;
+}
+#nav{
+    height:150px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start ;
+    align-items:center;
+    padding: 0 150px;
+    position:fixed;
+    gap:50px;
+    z-index: 99;
+}
+#nav img{
+    height:80px;
+
+}
+#nav h4{
+    text-transform:uppercase;
+    font-weight:500;
+}
+video{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    position: fixed;
+}
+#main{
+    position: relative;
+    background-color: rgba(0,0,0,0.40);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align: center;
+}
+#page1 h1{
+    font-size:40px;
+    font-weight: 900;
+    text-transform:uppercase;
+    font-family:sans-serif;
+    position: relative;
+    color:#000;
+    
+}
+#page1 h1::before{
+    content:"Kalasalingam Academy of Research and Education";
+    position: absolute;
+    color:#fff;
+    top:-4px;
+    left:-4px;
+}
+#page1 h2{
+    font-size:40px;
+    font-weight:800;
+    margin-top:10px;
+    margin-bottom:20px;
+    font-family:sans-serif;
+}
+#page1 p{
+    font-size:20px;
+    font-weight:500;
+    width:40%;
+    font-family:sans-serif;
+}
+#page2 {
+    min-height:100vh;
+    width:100%;
+}
+#scroller{
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    white-space: nowrap;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration:20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: roboto;
+    margin-right: 10px;
+    color:transparent;
+    transition: all linear 0.5;
+    -webkit-text-stroke: 2px #95c11E;
+}
+#scroller h4:hover{
+    color:#95c11E;
+}
+@keyframes scroll {
+    from{
+        transform:translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+#data-sec h2{
+    font-size:30px;
+    font-family:"roboto";
+    margin-bottom:20px;
+    font-family: gilroy;
+}
+#data-sec{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    margin:20px;
+}
+#data-sec p{
+    font-size:15px;
+    font-family: gilroy;
+}
+#cards-container{
+    display:flex;
+    height:60vh;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:70px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height:80%;
+    width:25%;
+    border-radius: 20px;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image: url("https://th.bing.com/th/id/OIP.zqzIKh_5JtwYCr7FfIcAXwHaFj?rs=1&pid=ImgDetMain");
+}
+#card2{
+    background-image: url("https://th.bing.com/th/id/OIP.OvZIw_z4_4rarNHaBNzmhwHaFY?w=550&h=400&rs=1&pid=ImgDetMain");
+}
+#card3{
+    background-image: url("https://www.tamilnaducolleges.org/upload/gallery/small/1478581464387.jpeg");
+}
+#card4{
+    background-image: url("https://www.orcheds.com/wp-content/uploads/2020/08/budget-management.jpg");
+}
+#card5{
+    background-image: url("https://img.freepik.com/free-vector/gradient-illustration-class-2023-celebration_23-2150267540.jpg");
+}
+#card6{
+    background-image: url("https://www.sangwanschoolrohtak.com/Uploads/fileupload/827curricular-activities.jpg");
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11E;
+    padding: 30px;
+    padding-top: 110px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    border-radius: 20px;
+}
+.overlay h4{
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight:800;
+    white-space: wrap;
+    margin-bottom: 20px;
+    font-family: gilroy;
+}
+.para{
+    color: #000;
+    font-size: 19px;
+    font-family: gilroy;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#greendiv{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom ,#6d8d16,#ACE022);
+}
+#greendiv h4{
+    font-size: 23px;
+    width: 50%;
+    font-family: gilroy;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 800;
+}
+#greendiv img{
+    height: 100%;
+    object-fit: cover;
+    width:14%;
+}
+#con-pdf{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    margin: 50px;
+}
+#con-pdf button{
+    height:40px;
+    width:100px;
+    color:black;
+    border-radius: 8px;
+    border-width: 0px;
+    background-color: #ACE022;
+    font-size:20px;
+    margin-bottom:50px;
+}
+#con-pdf h4{
+    font-size:30px;
+    font-family: gilroy;
+}
+.data-sec{
+    width:60%;
+}
